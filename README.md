@@ -9,4 +9,4 @@
 | Benjamin Khawarizmi Habibi | 5027231078 |
 
 # 1. Topologi Jaringan
-![topo cpt fp jarkom](https://github.com/user-attachments/assets/637fd1ea-73e5-424f-9947-acedcb6bbfce)
+![topo cpt fp jarkom](https://github.com/user-attachments/assets/2b794916-a7b9-40a3-8155-b29388dac36c)
