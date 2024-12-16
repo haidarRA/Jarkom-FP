@@ -63,3 +63,53 @@ Lakukan hal yang sama untuk masing - masing interface pada setiap router yang ad
 
 ### Router0
 ![image](https://github.com/user-attachments/assets/a2afdc46-670a-4a0e-9d41-75326ff366c1)
+
+## Konfigurasi Client
+Klik node client, kemudian klik tab Config dan isi IP dari gateway dan IP dari interface yang ada beserta subnet masknya (biasanya hanya FastEthernet0).
+Sebagai contoh, berikut adalah konfigurasi untuk client **Ruang Server dan Data**.
+![image](https://github.com/user-attachments/assets/10a6a094-9796-412b-b8a4-4688b5342fd4)
+
+![image](https://github.com/user-attachments/assets/ada524fc-92e5-42be-81c9-343a3c6b7c7a)
+
+Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan sesuai dengan subnet yang ada.
+### Ruang Server dan Data
+![image](https://github.com/user-attachments/assets/c3bb03df-043d-4c78-bc88-13cfd5c1e647)
+
+### Dept. HR2
+![image](https://github.com/user-attachments/assets/e48b3683-16cd-45c5-b91e-4d352426800c)
+
+### Dept. IT
+![image](https://github.com/user-attachments/assets/b8d9ff66-0ec5-4ffc-85b9-a42673a6859d)
+
+### Dept. Penjualan
+![image](https://github.com/user-attachments/assets/a36481c5-c535-4a4a-8607-b0f52b6b2979)
+
+### Dept. Pemasaran
+![image](https://github.com/user-attachments/assets/67444c43-8d84-42b4-9ef9-c6699110d98b)
+
+### Dept. R&D
+![image](https://github.com/user-attachments/assets/5abdf0f0-afaa-4a2c-8214-d5e1e64c7fb3)
+
+### Dept. Legal
+![image](https://github.com/user-attachments/assets/e706319f-74ba-4eed-bdea-7d5f75273427)
+
+### Dept. Keuangan
+![image](https://github.com/user-attachments/assets/cc387922-09b6-43ba-aeb5-7ce84c1ebe76)
+
+### Dept. Customer Support
+![image](https://github.com/user-attachments/assets/68d8524f-e877-4852-811b-7b344f340af9)
+
+### Dept. Manajemen
+![image](https://github.com/user-attachments/assets/72a5d9ce-188f-401b-845e-bc46e994075d)
+
+### Ruang Meeting
+![image](https://github.com/user-attachments/assets/bf6fa4a4-a3b6-46d5-ad3f-7a72bd5c6caa)
+
+### Dept. HR1
+![image](https://github.com/user-attachments/assets/12c8a010-b1f2-424a-bde3-0f10cf6292c9)
+
+### Dept. Cybersecurity
+![image](https://github.com/user-attachments/assets/deac44ca-4757-4bff-9d7b-b5cc6290cc7f)
+
+### Subnet Cabang
+![image](https://github.com/user-attachments/assets/42899c57-ddc4-4161-a52b-908c62c664a9)
