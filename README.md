@@ -71,7 +71,7 @@ Sebagai contoh, berikut adalah konfigurasi untuk client **Ruang Server dan Data*
 
 ![image](https://github.com/user-attachments/assets/ada524fc-92e5-42be-81c9-343a3c6b7c7a)
 
-Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan sesuai dengan subnet yang ada.
+Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan sesuai dengan subnet yang ada (kecuali pada subnet A3 yang terhubung dengan Lantai2 yang menggunakan IP DHCP).
 ### Ruang Server dan Data
 ![image](https://github.com/user-attachments/assets/c3bb03df-043d-4c78-bc88-13cfd5c1e647)
 
@@ -80,15 +80,6 @@ Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan s
 
 ### Dept. IT
 ![image](https://github.com/user-attachments/assets/b8d9ff66-0ec5-4ffc-85b9-a42673a6859d)
-
-### Dept. Penjualan
-![image](https://github.com/user-attachments/assets/a36481c5-c535-4a4a-8607-b0f52b6b2979)
-
-### Dept. Pemasaran
-![image](https://github.com/user-attachments/assets/67444c43-8d84-42b4-9ef9-c6699110d98b)
-
-### Dept. R&D
-![image](https://github.com/user-attachments/assets/5abdf0f0-afaa-4a2c-8214-d5e1e64c7fb3)
 
 ### Dept. Legal
 ![image](https://github.com/user-attachments/assets/e706319f-74ba-4eed-bdea-7d5f75273427)
@@ -113,3 +104,26 @@ Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan s
 
 ### Subnet Cabang
 ![image](https://github.com/user-attachments/assets/42899c57-ddc4-4161-a52b-908c62c664a9)
+
+# 4. Konfigurasi DHCP
+Untuk konfigurasi DCHP pada router Lantai2, jalankan command berikut.
+```
+en
+conf t
+service dhcp
+ip dhcp pool Lantai2
+network 192.168.0.0 255.255.255.128
+default-router 192.168.0.126
+dns-server 192.168.0.126
+```
+![image](https://github.com/user-attachments/assets/65965e7c-7bdc-410c-a92f-1ee6c7007b0e)
+
+Untuk mengecek apakah konfigurasi DHCP berhasil, gunakan IP DHCP pada client yang ada pada subnet A3 dan pastikan apakah client - client tersebut mendapatkan IP DHCP.
+### Dept. Penjualan
+![image](https://github.com/user-attachments/assets/70a25a95-6f5e-4397-bd90-6fbe28fae045)
+
+### Dept. Pemasaran
+![image](https://github.com/user-attachments/assets/fbce927a-61ab-4953-9150-4270eec081f3)
+
+### Dept. R&D
+![image](https://github.com/user-attachments/assets/f99bff01-6aa9-4d7c-9b26-e0b2b8c0afc0)
