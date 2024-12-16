@@ -127,3 +127,110 @@ Untuk mengecek apakah konfigurasi DHCP berhasil, gunakan IP DHCP pada client yan
 
 ### Dept. R&D
 ![image](https://github.com/user-attachments/assets/f99bff01-6aa9-4d7c-9b26-e0b2b8c0afc0)
+
+# 5. Konfigurasi Static Routing
+Jalankan command berikut pada masing - masing router.
+
+### Lantai1
+```
+en
+conf t
+ip route 0.0.0.0 0.0.0.0 192.168.1.130
+do write
+```
+
+### Lantai2
+```
+en
+conf t
+ip route 192.168.0.128 255.255.255.128 192.168.1.129
+ip route 0.0.0.0 0.0.0.0 192.168.1.134
+do write
+```
+
+### Lantai3
+```
+en
+conf t
+ip route 192.168.0.128 255.255.255.128 192.168.1.133
+ip route 192.168.1.128 255.255.255.252 192.168.1.133
+ip route 192.168.0.0 255.255.255.128 192.168.1.133
+ip route 0.0.0.0 0.0.0.0 192.168.1.138
+do write
+```
+
+### Lantai4
+```
+en
+conf t
+ip route 192.168.0.128 255.255.255.128 192.168.1.137
+ip route 192.168.1.128 255.255.255.252 192.168.1.137
+ip route 192.168.0.0 255.255.255.128 192.168.1.137
+ip route 192.168.1.132 255.255.255.252 192.168.1.137
+ip route 192.168.1.64 255.255.255.192 192.168.1.137
+ip route 0.0.0.0 0.0.0.0 192.168.1.142
+do write
+```
+
+### Lantai5
+```
+en
+conf t
+ip route 192.168.0.128 255.255.255.128 192.168.1.141
+ip route 192.168.1.128 255.255.255.252 192.168.1.141
+ip route 192.168.0.0 255.255.255.128 192.168.1.141
+ip route 192.168.1.132 255.255.255.252 192.168.1.141
+ip route 192.168.1.64 255.255.255.192 192.168.1.141
+ip route 192.168.1.136 255.255.255.252 192.168.1.141
+ip route 192.168.1.192 255.255.255.192 192.168.1.141
+ip route 0.0.0.0 0.0.0.0 192.168.1.146
+do write
+```
+
+### Cabang
+```
+en
+conf t
+ip route 0.0.0.0 0.0.0.0 192.168.1.154
+do write
+```
+
+### Router0
+```
+en
+conf t
+ip route 192.168.0.128 255.255.255.128 192.168.1.145
+ip route 192.168.1.128 255.255.255.252 192.168.1.145
+ip route 192.168.0.0 255.255.255.128 192.168.1.145
+ip route 192.168.1.132 255.255.255.252 192.168.1.145
+ip route 192.168.1.64 255.255.255.192 192.168.1.145
+ip route 192.168.1.136 255.255.255.252 192.168.1.145
+ip route 192.168.1.192 255.255.255.192 192.168.1.145
+ip route 192.168.1.140 255.255.255.252 192.168.1.145
+ip route 192.168.1.0 255.255.255.192 192.168.1.145
+ip route 192.168.1.148 255.255.255.252 192.168.1.153
+do write
+```
+
+Untuk melihat routing yang ada pada router, dapat menggunakan command ```sh ip route```.
+### Lantai1
+![image](https://github.com/user-attachments/assets/d5ea9375-5ca9-477a-b3a1-65159f0ae03c)
+
+### Lantai2
+![image](https://github.com/user-attachments/assets/638aa9b5-0e2a-4d4f-995f-37cb73c0443a)
+
+### Lantai3
+![image](https://github.com/user-attachments/assets/8296af54-4de9-4f3f-9be3-badbad7506fd)
+
+### Lantai4
+![image](https://github.com/user-attachments/assets/53021947-3a70-4b4a-9b7b-eb00c69812f9)
+
+### Lantai5
+![image](https://github.com/user-attachments/assets/c9e4f020-10f0-481a-8fa5-e4cb3e79988f)
+
+### Cabang
+![image](https://github.com/user-attachments/assets/20fb55f6-8717-4559-8cf3-c6353e4457f6)
+
+### Router0
+![image](https://github.com/user-attachments/assets/5fff69cb-40a5-4b0a-8aad-99fccfe9106c)
+
