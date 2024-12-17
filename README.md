@@ -62,7 +62,7 @@ Lakukan hal yang sama untuk masing - masing interface pada setiap router yang ad
 ![image](https://github.com/user-attachments/assets/b48787e2-c9f1-4aea-95c8-a31eb2ce4464)
 
 ### Router0
-![image](https://github.com/user-attachments/assets/a2afdc46-670a-4a0e-9d41-75326ff366c1)
+![image](https://github.com/user-attachments/assets/55a1966f-e2c0-4963-8a83-56c8c907fc52)
 
 ## Konfigurasi Client
 Klik node client, kemudian klik tab Config dan isi IP dari gateway dan IP dari interface yang ada beserta subnet masknya (biasanya hanya FastEthernet0).
@@ -234,3 +234,119 @@ Untuk melihat routing yang ada pada router, dapat menggunakan command ```sh ip r
 ### Router0
 ![image](https://github.com/user-attachments/assets/5fff69cb-40a5-4b0a-8aad-99fccfe9106c)
 
+# 6. Konfigurasi NAT
+Konfigurasi interface inside dan outside serta NAT dari tiap router dengan command berikut.
+### Lantai1
+```
+en
+conf t
+int f0/0
+ip nat outside
+exit
+int f0/1
+ip nat inside
+exit
+ip nat inside source list 1 interface f0/0 overload
+```
+
+### Lantai2
+```
+en
+conf t
+int f0/0
+ip nat outside
+exit
+int f0/1
+ip nat inside
+exit
+int f1/0
+ip nat inside
+exit
+ip nat inside source list 1 interface f0/0 overload
+```
+
+### Lantai3
+```
+en
+conf t
+int f0/0
+ip nat outside
+exit
+int f0/1
+ip nat inside
+exit
+int f1/0
+ip nat inside
+exit
+ip nat inside source list 1 interface f0/0 overload
+```
+
+### Lantai4
+```
+en
+conf t
+int f0/0
+ip nat outside
+exit
+int f0/1
+ip nat inside
+exit
+int f1/0
+ip nat inside
+exit
+ip nat inside source list 1 interface f0/0 overload
+```
+
+### Lantai5
+```
+en
+conf t
+int f0/0
+ip nat outside
+exit
+int f0/1
+ip nat inside
+exit
+int f1/0
+ip nat inside
+exit
+ip nat inside source list 1 interface f0/0 overload
+```
+
+### Cabang
+```
+en
+conf t
+int f0/0
+ip nat outside
+exit
+int f0/1
+ip nat inside
+exit
+ip nat inside source list 1 interface f0/0 overload
+```
+
+### Router0
+```
+Router0:
+en
+conf t
+int f0/0
+ip nat outside
+exit
+int f0/1
+ip nat inside
+exit
+int f1/0
+ip nat inside
+exit
+access-list 1 permit any
+ip nat inside source list 1 interface f0/0 overload
+```
+
+Jangan lupa untuk atur DNS server pada tiap client menjadi 8.8.8.8.
+![image](https://github.com/user-attachments/assets/04049dd1-4e77-4dd3-b624-ecc00ab9dda5)
+
+## Testing
+![image](https://github.com/user-attachments/assets/b8f620dd-5989-4e79-9b4b-f15c3f563d97)
+![image](https://github.com/user-attachments/assets/fbe5bfad-79e6-4f71-b8a8-b93ca058da96)
