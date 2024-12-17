@@ -9,7 +9,7 @@
 | Benjamin Khawarizmi Habibi | 5027231078 |
 
 # 1. Topologi Jaringan
-![topo cpt fp jarkom](https://github.com/user-attachments/assets/86efd2c0-c450-4341-a9df-1fe193f3eeca)
+![topo cpt fp jarkom](https://github.com/user-attachments/assets/c2e361e6-f63f-4519-8e0c-acf92f9b568e)
 
 # 2. Routing dan Subnetting
 Untuk subnetting menggunakan VLSM.
@@ -20,10 +20,13 @@ Untuk subnetting menggunakan VLSM.
 ![image](https://github.com/user-attachments/assets/d03a916c-3e89-4927-b9ed-ed0da8d6791c)
 
 ## Pembagian IP VLSM
-![image](https://github.com/user-attachments/assets/3fc1d6c9-4afb-4eb0-85f8-813356d7628c)
+![image](https://github.com/user-attachments/assets/d59ede5a-6e4a-433f-aa2f-673a4cd5af37)
+
+## VLSM Tree
+![VLSM TREE FP Jarkom](https://github.com/user-attachments/assets/8c68beca-a3d7-40d2-b924-d2b45aa85e7c)
 
 ## Topologi Jaringan (setelah subnetting)
-![topo cpt fp jarkom subnet](https://github.com/user-attachments/assets/36b7d8b9-d49f-46a9-bd78-04d3649f0cde)
+![topo cpt fp jarkom subnet](https://github.com/user-attachments/assets/15a5b9ed-82fa-4533-b2d3-bcd4409bfe64)
 
 # 3. Konfigurasi Static IP
 
@@ -106,7 +109,7 @@ Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan s
 ![image](https://github.com/user-attachments/assets/42899c57-ddc4-4161-a52b-908c62c664a9)
 
 # 4. Konfigurasi DHCP
-Untuk konfigurasi DCHP pada router Lantai2, jalankan command berikut.
+Untuk konfigurasi DCHP pada router Lantai2, jalankan command berikut pada CLI router Lantai2.
 ```
 en
 conf t
@@ -129,7 +132,7 @@ Untuk mengecek apakah konfigurasi DHCP berhasil, gunakan IP DHCP pada client yan
 ![image](https://github.com/user-attachments/assets/f99bff01-6aa9-4d7c-9b26-e0b2b8c0afc0)
 
 # 5. Konfigurasi Static Routing
-Jalankan command berikut pada masing - masing router.
+Jalankan command berikut pada masing - masing CLI router.
 
 ### Lantai1
 ```
@@ -235,7 +238,7 @@ Untuk melihat routing yang ada pada router, dapat menggunakan command ```sh ip r
 ![image](https://github.com/user-attachments/assets/5fff69cb-40a5-4b0a-8aad-99fccfe9106c)
 
 # 6. Konfigurasi NAT
-Konfigurasi interface inside dan outside serta NAT dari tiap router dengan command berikut.
+Konfigurasi interface inside dan outside serta NAT dari tiap router dengan command berikut pada CLI router.
 ### Lantai1
 ```
 en
@@ -350,3 +353,34 @@ Jangan lupa untuk atur DNS server pada tiap client menjadi 8.8.8.8.
 ## Testing
 ![image](https://github.com/user-attachments/assets/b8f620dd-5989-4e79-9b4b-f15c3f563d97)
 ![image](https://github.com/user-attachments/assets/fbe5bfad-79e6-4f71-b8a8-b93ca058da96)
+
+# 7. Konfigurasi GRE Tunnel
+Jalankan command berikut pada CLI router Lantai5 dan Cabang untuk mengonfigurasi GRE Tunnel yang dapat menghubungkan router Lantai5 dan Cabang.
+
+### Lantai5:
+```
+en
+conf t
+int tunnel 0
+ip address 192.168.1.157 255.255.255.252
+tunnel source f0/0
+tunnel destination 192.168.1.153
+tunnel mode gre ip
+no shutdown
+```
+
+### Cabang:
+```
+en
+conf t
+int tunnel 0
+ip address 192.168.1.158 255.255.255.252
+tunnel source f0/0
+tunnel destination 192.168.1.145
+tunnel mode gre ip
+no shutdown
+```
+
+## Testing
+![image](https://github.com/user-attachments/assets/dc5f876e-7b71-442b-8ee5-310eab2c91ce)
+![image](https://github.com/user-attachments/assets/915dd27a-1f66-4374-acaf-4709687f1ebe)
