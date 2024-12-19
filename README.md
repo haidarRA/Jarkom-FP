@@ -17,7 +17,7 @@ Untuk subnetting menggunakan VLSM.
 [Spreadsheet Routing dan Subnetting](https://docs.google.com/spreadsheets/d/13Pj18YQFvxAKhhVn5XzF5B-OAwWyuGGdb9itGGfaz1o/edit?gid=1522356619#gid=1522356619)
 
 ## Routing
-![image](https://github.com/user-attachments/assets/d03a916c-3e89-4927-b9ed-ed0da8d6791c)
+![image](https://github.com/user-attachments/assets/1fb9ae55-bd2f-456a-8d1a-9ae188f6c868)
 
 ## Pembagian IP VLSM
 ![image](https://github.com/user-attachments/assets/d59ede5a-6e4a-433f-aa2f-673a4cd5af37)
