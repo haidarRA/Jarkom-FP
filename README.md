@@ -524,7 +524,6 @@ ip nat inside source list 1 interface f0/0 overload
 
 ### Router0
 ```
-Router0:
 en
 conf t
 int f0/0
@@ -540,11 +539,70 @@ access-list 1 permit any
 ip nat inside source list 1 interface f0/0 overload
 ```
 
-Jangan lupa untuk atur DNS server pada tiap client menjadi 8.8.8.8.
+Atur DNS server pada tiap client menjadi 8.8.8.8.
 ![image](https://github.com/user-attachments/assets/04049dd1-4e77-4dd3-b624-ecc00ab9dda5)
+
+Konfigurasikan server internet yang terhubung dengan Router0 dengan konfigurasi berikut.
+![image](https://github.com/user-attachments/assets/9f5ee0d1-1d99-4b36-88c7-51c725f2a56e)
+
+Setelah itu, konfigurasikan tiap router agar dapat melakukan ping ke 8.8.8.8 dengan command berikut.
+### Lantai5
+```
+en
+conf t
+int f0/0
+ip route 8.8.8.0 255.255.255.0 192.168.1.146
+exit
+```
+
+### Lantai4
+```
+en
+conf t
+int f0/0
+ip route 8.8.8.0 255.255.255.0 192.168.1.142
+exit
+```
+
+### Lantai3
+```
+en
+conf t
+int f0/0
+ip route 8.8.8.0 255.255.255.0 192.168.1.138
+exit
+```
+
+### Lantai2
+```
+en
+conf t
+int f0/0
+ip route 8.8.8.0 255.255.255.0 192.168.1.134
+exit
+```
+
+### Lantai1
+```
+en
+conf t
+int f0/0
+ip route 8.8.8.0 255.255.255.0 192.168.1.130
+exit
+```
+
+### Cabang
+```
+en
+conf t
+int f0/0
+ip route 8.8.8.0 255.255.255.0 192.168.1.154
+exit
+```
 
 ## Testing
 ![image](https://github.com/user-attachments/assets/b8f620dd-5989-4e79-9b4b-f15c3f563d97)
+![image](https://github.com/user-attachments/assets/ca243e7d-62b5-4590-a593-108f3fce6421)
 ![image](https://github.com/user-attachments/assets/fbe5bfad-79e6-4f71-b8a8-b93ca058da96)
 
 # 7. Konfigurasi GRE Tunnel
