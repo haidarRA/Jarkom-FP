@@ -22,7 +22,7 @@
 ![topo cpt fp jarkom](https://github.com/user-attachments/assets/c2e361e6-f63f-4519-8e0c-acf92f9b568e)
 
 # 2. Routing dan Subnetting
-Untuk subnetting menggunakan VLSM.
+> Untuk subnetting menggunakan VLSM.
 
 [Spreadsheet Routing dan Subnetting](https://docs.google.com/spreadsheets/d/13Pj18YQFvxAKhhVn5XzF5B-OAwWyuGGdb9itGGfaz1o/edit?gid=1522356619#gid=1522356619)
 
