@@ -62,6 +62,8 @@ Tugas:
 - [Konfigurasi Static Routing](#5-konfigurasi-static-routing)
 - [Konfigurasi NAT](#6-konfigurasi-nat)
 - [Konfigurasi GRE Tunnel](#7-konfigurasi-gre-tunnel)
+- [Link Youtube](#link-youtube)
+- [Link Github](#link-github)
 
 # 1. Topologi Jaringan
 ![topo cpt fp jarkom](https://github.com/user-attachments/assets/c2e361e6-f63f-4519-8e0c-acf92f9b568e)
@@ -706,3 +708,7 @@ no shutdown
 
 ## Link Youtube
 [https://youtu.be/fkeiKkmD0VU](https://youtu.be/fkeiKkmD0VU)
+
+## Link Github
+Repository GitHub: https://github.com/haidarRA/Jarkom-FP
+
