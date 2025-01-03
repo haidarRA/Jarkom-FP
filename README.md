@@ -41,7 +41,7 @@
 # 3. Konfigurasi Static IP
 
 ## Konfigurasi Router
-Jalankan command berikut pada CLI router untuk konfigurasi static IP pada interface tertentu (untuk contoh pada router Lantai1 interface FastEthernet0/1)
+> Jalankan command berikut pada CLI router untuk konfigurasi static IP pada interface tertentu (untuk contoh pada router Lantai1 interface FastEthernet0/1)
 ```
 en
 conf t
@@ -51,10 +51,10 @@ no shutdown
 ```
 ![image](https://github.com/user-attachments/assets/86e6d4ca-1637-4340-a5df-afbb0b605719)
 
-Untuk mengecek apakah konfigurasi static IP berhasil, cek IP address pada interface router dengan command ``sh ip int brief``. <br/>
+> Untuk mengecek apakah konfigurasi static IP berhasil, cek IP address pada interface router dengan command ``sh ip int brief``. <br/>
 ![image](https://github.com/user-attachments/assets/7824009b-b128-4da2-bce5-d4ea542e8251)
 
-Lakukan hal yang sama untuk masing - masing interface pada setiap router yang ada pada topologi jaringan sesuai dengan subnet yang ada.
+> Lakukan hal yang sama untuk masing - masing interface pada setiap router yang ada pada topologi jaringan sesuai dengan subnet yang ada.
 
 ### Lantai1
 ![image](https://github.com/user-attachments/assets/2579ef74-e2b0-44d2-a7f0-04c798237ad9)
@@ -78,13 +78,13 @@ Lakukan hal yang sama untuk masing - masing interface pada setiap router yang ad
 ![image](https://github.com/user-attachments/assets/55a1966f-e2c0-4963-8a83-56c8c907fc52)
 
 ## Konfigurasi Client
-Klik node client, kemudian klik tab Config dan isi IP dari gateway dan IP dari interface yang ada beserta subnet masknya (biasanya hanya FastEthernet0).
-Sebagai contoh, berikut adalah konfigurasi untuk client **Ruang Server dan Data**.
+> Klik node client, kemudian klik tab Config dan isi IP dari gateway dan IP dari interface yang ada beserta subnet masknya (biasanya hanya FastEthernet0).
+> Sebagai contoh, berikut adalah konfigurasi untuk client **Ruang Server dan Data**.
 ![image](https://github.com/user-attachments/assets/10a6a094-9796-412b-b8a4-4688b5342fd4)
 
 ![image](https://github.com/user-attachments/assets/ada524fc-92e5-42be-81c9-343a3c6b7c7a)
 
-Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan sesuai dengan subnet yang ada (kecuali pada subnet A3 yang terhubung dengan Lantai2 yang menggunakan IP DHCP).
+> Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan sesuai dengan subnet yang ada (kecuali pada subnet A3 yang terhubung dengan Lantai2 yang menggunakan IP DHCP).
 ### Ruang Server dan Data
 ![image](https://github.com/user-attachments/assets/c3bb03df-043d-4c78-bc88-13cfd5c1e647)
 
@@ -119,7 +119,7 @@ Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan s
 ![image](https://github.com/user-attachments/assets/42899c57-ddc4-4161-a52b-908c62c664a9)
 
 # 4. Konfigurasi DHCP
-Untuk konfigurasi DCHP pada router Lantai2, jalankan command berikut pada CLI router Lantai2.
+> Untuk konfigurasi DCHP pada router Lantai2, jalankan command berikut pada CLI router Lantai2.
 ```
 en
 conf t
@@ -131,7 +131,7 @@ dns-server 192.168.0.126
 ```
 ![image](https://github.com/user-attachments/assets/65965e7c-7bdc-410c-a92f-1ee6c7007b0e)
 
-Untuk mengecek apakah konfigurasi DHCP berhasil, gunakan IP DHCP pada client yang ada pada subnet A3 dan pastikan apakah client - client tersebut mendapatkan IP DHCP.
+> Untuk mengecek apakah konfigurasi DHCP berhasil, gunakan IP DHCP pada client yang ada pada subnet A3 dan pastikan apakah client - client tersebut mendapatkan IP DHCP.
 ### Dept. Penjualan
 ![image](https://github.com/user-attachments/assets/70a25a95-6f5e-4397-bd90-6fbe28fae045)
 
@@ -142,7 +142,7 @@ Untuk mengecek apakah konfigurasi DHCP berhasil, gunakan IP DHCP pada client yan
 ![image](https://github.com/user-attachments/assets/f99bff01-6aa9-4d7c-9b26-e0b2b8c0afc0)
 
 # 5. Konfigurasi Static Routing
-Jalankan command berikut pada masing - masing CLI router.
+> Jalankan command berikut pada masing - masing CLI router.
 
 ### Lantai1
 ```
@@ -418,7 +418,7 @@ ip route 192.168.1.156 255.255.255.252 192.168.1.153
 do write
 ```
 
-Untuk melihat routing yang ada pada router, dapat menggunakan command ```sh ip route```.
+> Untuk melihat routing yang ada pada router, dapat menggunakan command ```sh ip route```.
 ### Lantai1
 ![image](https://github.com/user-attachments/assets/75acac61-e381-4b44-b12a-8e78ad438e2f)
 
@@ -441,7 +441,9 @@ Untuk melihat routing yang ada pada router, dapat menggunakan command ```sh ip r
 ![image](https://github.com/user-attachments/assets/b0014d7e-92df-404f-9cd4-1628d92d3ec9)
 
 # 6. Konfigurasi NAT
-Konfigurasi interface inside dan outside serta NAT dari tiap router dengan command berikut pada CLI router.
+
+> Konfigurasi interface inside dan outside serta NAT dari tiap router dengan command berikut pada CLI router.
+
 ### Lantai1
 ```
 en
@@ -549,13 +551,16 @@ access-list 1 permit any
 ip nat inside source list 1 interface f0/0 overload
 ```
 
-Atur DNS server pada tiap client menjadi 8.8.8.8.
+> Atur DNS server pada tiap client menjadi 8.8.8.8.
+
 ![image](https://github.com/user-attachments/assets/04049dd1-4e77-4dd3-b624-ecc00ab9dda5)
 
-Konfigurasikan server internet yang terhubung dengan Router0 dengan konfigurasi berikut.
+> Konfigurasikan server internet yang terhubung dengan Router0 dengan konfigurasi berikut.
+
 ![image](https://github.com/user-attachments/assets/9f5ee0d1-1d99-4b36-88c7-51c725f2a56e)
 
-Setelah itu, konfigurasikan tiap router agar dapat melakukan ping ke 8.8.8.8 dengan command berikut.
+> Setelah itu, konfigurasikan tiap router agar dapat melakukan ping ke 8.8.8.8 dengan command berikut.
+
 ### Lantai5
 ```
 en
@@ -616,7 +621,7 @@ exit
 ![image](https://github.com/user-attachments/assets/fbe5bfad-79e6-4f71-b8a8-b93ca058da96)
 
 # 7. Konfigurasi GRE Tunnel
-Jalankan command berikut pada CLI router Lantai5 dan Cabang untuk mengonfigurasi GRE Tunnel yang dapat menghubungkan router Lantai5 dan Cabang.
+> Jalankan command berikut pada CLI router Lantai5 dan Cabang untuk mengonfigurasi GRE Tunnel yang dapat menghubungkan router Lantai5 dan Cabang.
 
 ### Lantai5:
 ```
