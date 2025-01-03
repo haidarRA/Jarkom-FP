@@ -8,6 +8,11 @@
 | Haidar Rafi Aqyla | 5027231029 |
 | Benjamin Khawarizmi Habibi | 5027231078 |
 
+# Daftar Isi
+
+1. [Kelompok 3B](#kelompok-3b)
+2. [Topologi Jaringan](#1-topologi-jaringan)
+
 # 1. Topologi Jaringan
 ![topo cpt fp jarkom](https://github.com/user-attachments/assets/c2e361e6-f63f-4519-8e0c-acf92f9b568e)
 
