@@ -41,7 +41,7 @@ no shutdown
 ```
 ![image](https://github.com/user-attachments/assets/86e6d4ca-1637-4340-a5df-afbb0b605719)
 
-Untuk mengecek apakah konfigurasi static IP berhasil, cek IP address pada interface router dengan command ``sh ip int brief``.
+Untuk mengecek apakah konfigurasi static IP berhasil, cek IP address pada interface router dengan command ``sh ip int brief``. <br/>
 ![image](https://github.com/user-attachments/assets/7824009b-b128-4da2-bce5-d4ea542e8251)
 
 Lakukan hal yang sama untuk masing - masing interface pada setiap router yang ada pada topologi jaringan sesuai dengan subnet yang ada.
