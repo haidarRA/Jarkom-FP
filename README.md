@@ -8,8 +8,47 @@
 | Haidar Rafi Aqyla | 5027231029 |
 | Benjamin Khawarizmi Habibi | 5027231078 |
 
+# Case Project
+
+Perusahaan ARA Tech tengah mengalami pertumbuhan yang pesat dan memerlukan
+infrastruktur jaringan yang handal untuk mendukung kelancaran operasionalnya. Saat ini,
+perusahaan memiliki satu gedung utama yang terdiri dari lima lantai, dengan masing-masing
+lantai dihuni oleh dua hingga tiga departemen yang memiliki kebutuhan perangkat berbeda.
+Lantai 1: Infrastruktur dan Operasional
+• Departemen IT: 50 perangkat
+• Departemen HR: 20 perangkat
+• Ruang Server dan Data Center: 10 perangkat
+Lantai 2: Pengembangan dan Pemasaran
+• Departemen R&D: 40 perangkat
+• Departemen Pemasaran: 30 perangkat
+• Departemen Penjualan: 20 perangkat
+Lantai 3: Keuangan dan Legal
+• Departemen Keuangan: 25 perangkat
+• Departemen Legal: 15 perangkat
+Lantai 4: Manajemen dan Dukungan Pelanggan
+• Departemen Manajemen: 10 perangkat
+• Departemen Customer Support: 30 perangkat
+Lantai 5: Keamanan dan Sumber Daya Manusia
+• Departemen Cybersecurity: 20 perangkat
+• Departemen HR: 20 perangkat
+• Ruang Meeting: 10 perangkat
+Selain itu, perusahaan juga memiliki satu cabang di kota lain yang memerlukan koneksi ke
+gedung utama melalui jaringan VPN. Di cabang tersebut, terdapat satu subnet yang
+mencakup seluruh perangkat di cabang (sekitar 40 perangkat).
+
+Tugas:
+1. Buatlah topologi jaringan yang mencakup gedung utama dengan lima lantai dan cabang yang terhubung melalui VPN di Cisco Packet Tracer. Gunakan perangkat jaringan yang sesuai (misalnya router, switch, dan perangkat lain) untuk membangun topologi tersebut. (20 poin)
+2. Lakukan subnetting pada jaringan dan tentukan Subnet Mask, Network ID, Broadcast Address, serta Range IP untuk setiap subnet. Buatlah tabel alokasi subnet untuk setiap departemen berdasarkan jumlah perangkat yang dibutuhkan di masingmasing subnet. Gunakan alamat IP Private sesuai dengan standar yang ada (misalnya 10.0.0.0/8, 172.16.0.0/12, atau 192.168.0.0/16). (15 poin)
+3. Konfigurasi Static IP pada setiap perangkat jaringan di semua departemen, kecuali lantai 2, sesuai dengan pembagian subnetting yang telah dilakukan. Pastikan alamat IP yang diberikan sesuai dengan alokasi subnet yang sudah dibuat. (10 poin)
+4. Departemen R&D, Pemasaran, dan Penjualan akan menggunakan DHCP untuk mengalokasikan alamat IP secara dinamis kepada perangkat mereka. Konfigurasikan DHCP server pada router dan pastikan perangkat di tiga departemen tersebut mendapatkan IP otomatis sesuai dengan rentang yang telah ditentukan. (15 poin)
+5. Konfigurasi Static Routing agar perangkat di setiap departemen dapat berkomunikasi lintas subnet. Jangan menggunakan default route untuk menghubungkan subnetsubnet yang ada. Pastikan setiap router pada masing-masing lantai terhubung dengan benar dan dapat melakukan routing antar subnet. (15 poin)
+6. Perusahaan membutuhkan akses ke internet untuk semua perangkat yang terhubung. Konfigurasikan NAT Overload (PAT) pada router utama untuk memungkinkan perangkat dalam jaringan lokal mengakses internet, misalnya dengan melakukan ping ke 8.8.8.8. (15 poin)
+7. Hubungkan Gedung Utama ke Cabang menggunakan GRE Tunnel. Konfigurasikan Generic Routing Encapsulation (GRE Tunnel) antara router di gedung utama dan router di cabang untuk membangun koneksi virtual yang aman. Pastikan kedua router dapat saling berkomunikasi melalui GRE Tunnel dan verifikasi konektivitasnya dengan melakukan ping antar router atau perangkat di masing-masing jaringan. (10 poin)
+
 # Daftar Isi
 - [Kelompok 3B](#kelompok-3b)
+- [Case Project](#case-project)
+- [Daftar Isi](#daftar-isi)
 - [Topologi Jaringan](#1-topologi-jaringan)
 - [Routing dan Subnetting](#2-routing-dan-subnetting)
 - [Konfigurasi Static IP](#3-konfigurasi-static-ip)
