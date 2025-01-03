@@ -42,6 +42,7 @@
 
 ## Konfigurasi Router
 > Jalankan command berikut pada CLI router untuk konfigurasi static IP pada interface tertentu (untuk contoh pada router Lantai1 interface FastEthernet0/1)
+
 ```
 en
 conf t
@@ -52,6 +53,7 @@ no shutdown
 ![image](https://github.com/user-attachments/assets/86e6d4ca-1637-4340-a5df-afbb0b605719)
 
 > Untuk mengecek apakah konfigurasi static IP berhasil, cek IP address pada interface router dengan command ``sh ip int brief``. <br/>
+
 ![image](https://github.com/user-attachments/assets/7824009b-b128-4da2-bce5-d4ea542e8251)
 
 > Lakukan hal yang sama untuk masing - masing interface pada setiap router yang ada pada topologi jaringan sesuai dengan subnet yang ada.
@@ -80,11 +82,13 @@ no shutdown
 ## Konfigurasi Client
 > Klik node client, kemudian klik tab Config dan isi IP dari gateway dan IP dari interface yang ada beserta subnet masknya (biasanya hanya FastEthernet0).
 > Sebagai contoh, berikut adalah konfigurasi untuk client **Ruang Server dan Data**.
+
 ![image](https://github.com/user-attachments/assets/10a6a094-9796-412b-b8a4-4688b5342fd4)
 
 ![image](https://github.com/user-attachments/assets/ada524fc-92e5-42be-81c9-343a3c6b7c7a)
 
 > Lakukan hal yang sama untuk setiap node client yang ada pada topologi jaringan sesuai dengan subnet yang ada (kecuali pada subnet A3 yang terhubung dengan Lantai2 yang menggunakan IP DHCP).
+
 ### Ruang Server dan Data
 ![image](https://github.com/user-attachments/assets/c3bb03df-043d-4c78-bc88-13cfd5c1e647)
 
@@ -120,6 +124,7 @@ no shutdown
 
 # 4. Konfigurasi DHCP
 > Untuk konfigurasi DCHP pada router Lantai2, jalankan command berikut pada CLI router Lantai2.
+
 ```
 en
 conf t
@@ -132,6 +137,7 @@ dns-server 192.168.0.126
 ![image](https://github.com/user-attachments/assets/65965e7c-7bdc-410c-a92f-1ee6c7007b0e)
 
 > Untuk mengecek apakah konfigurasi DHCP berhasil, gunakan IP DHCP pada client yang ada pada subnet A3 dan pastikan apakah client - client tersebut mendapatkan IP DHCP.
+
 ### Dept. Penjualan
 ![image](https://github.com/user-attachments/assets/70a25a95-6f5e-4397-bd90-6fbe28fae045)
 
@@ -419,6 +425,7 @@ do write
 ```
 
 > Untuk melihat routing yang ada pada router, dapat menggunakan command ```sh ip route```.
+
 ### Lantai1
 ![image](https://github.com/user-attachments/assets/75acac61-e381-4b44-b12a-8e78ad438e2f)
 
