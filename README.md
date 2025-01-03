@@ -9,9 +9,14 @@
 | Benjamin Khawarizmi Habibi | 5027231078 |
 
 # Daftar Isi
-
-1. [Kelompok 3B](#kelompok-3b)
-2. [Topologi Jaringan](#1-topologi-jaringan)
+- [Kelompok 3B](#kelompok-3b)
+- [Topologi Jaringan](#1-topologi-jaringan)
+- [Routing dan Subnetting](#2-routing-dan-subnetting)
+- [Konfigurasi Static IP](#3-konfigurasi-static-ip)
+- [Konfigurasi DHCP](#4-konfigurasi-dhcp)
+- [Konfigurasi Static Routing](#5-konfigurasi-static-routing)
+- [Konfigurasi NAT](#6-konfigurasi-nat)
+- [Konfigurasi GRE Tunnel](#7-konfigurasi-gre-tunnel)
 
 # 1. Topologi Jaringan
 ![topo cpt fp jarkom](https://github.com/user-attachments/assets/c2e361e6-f63f-4519-8e0c-acf92f9b568e)
